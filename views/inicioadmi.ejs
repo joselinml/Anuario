@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/inicioadmi.css">
+    <title>Administradores</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido Administrador</h1>
+        <form action="/buscaralumnos" method="post">
+            <input type="text" name="nombre" placeholder="Nombre del alumno">
+            <button type="submit">Buscar</button>
+        </form>
+        <div>
+            <h2>Administrar Alumnos</h2>
+            <p>Aquí puedes administrar los alumnos registrados.</p>
+            <a href="/alumnosadmi">Ir a Administración de Alumnos</a>
+        </div>
+        <div>
+            <h2>Proyectos</h2>
+            <p>Aquí puedes acceder y gestionar los proyectos.</p>
+            <a href="/proyectosadmi">Ir a Proyectos</a>
+        </div>
+        <div>
+            <button type="button"><a href="/login">Cerrar Sesión</a></button>
+        </div>
+    </div>
+</body>
+</html>

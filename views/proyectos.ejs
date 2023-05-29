@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/proyectos.css">
+    
+    <title>Proyectos</title>
+  </head>
+  <body>
+    <header>
+      
+
+
+      <h1>Proyectos de nuestros alumnos</h1>
+      
+
+      <div class="buttons">
+        <a href="/newproyect">
+        <button class="more-button">
+            <span class="glyphicon glyphicon-plus"></span>Añadir proyecto</button>
+        
+        </a>
+      </div>
+
+    </header>
+    <div class="container">
+      <% proyectos.forEach(proyecto => { %>
+      
+      <div class="card">
+          <div class="image-container">
+              <img src="/public/imagenes/<%=proyecto.foto%>" alt="">
+          </div>
+          <div class="contenido">
+              <h3><%= proyecto.nombre_proyecto %></h3>
+              <p> <%= proyecto.detalles_proyecto %></p>
+              <p><strong>Autores:</strong><%= proyecto.autores %></p>
+          </div>
+      </div>
+      <% }) %>
+    </div>
+    
+   
+  </body>
+</html>

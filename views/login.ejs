@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="public/css/login.css">
+  <title>Login</title>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Iniciar sesión</h1>
+    <form action="/login" class="formulario" method="post">
+      <div class="logo">
+        <img src="public/imagenes/iconouser.png" alt="Logo">
+      </div>
+      <div class="form-group">
+        <label for="correo_electronico"><i class="bi bi-envelope"></i></i>Correo electrónico</label>
+        <input type="text" id="correo_electronico" name="correo_electronico" placeholder="Introduce tu correo electrónico">
+      </div>
+      <div class="form-group">
+        <label for="contrasena"><i class="bi bi-file-earmark-lock-fill"></i>Contraseña</label>
+        <input type="password" id="contrasena" name="contrasena" placeholder="Introduce tu contraseña">
+      </div>
+     
+      <button type="submit">Iniciar Sesión</button>
+    </form>
+    <p class="register-link">¿No tienes una cuenta? <a href="/registrar">Regístrate</a></p>
+  </div>
+  
+  
+</body>
+</html>

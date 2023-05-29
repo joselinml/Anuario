@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/alumnos.css">
+    <title>Alumnos</title>
+</head>
+<body>
+    
+    <header>
+
+        <h1>Nuestros alumnos</h1>
+
+      </header>
+    
+   
+    
+      <div class="container">
+        <% alumnos.forEach(alumno => { %>
+        <div class="card">
+          <img src="/public/imagenes/<%= alumno.fotografia %>" alt="<%= alumno.fotografia %>">
+          <h3 class="important"><%= alumno.nombre %></h3>
+          <p><span class="important">Número de Control:</span> <%= alumno.Num_control %></p>
+          <p><span class="important">Habilidades y fortalezas:</span> <%= alumno.habilidades_fortalezas%></p>
+          <p><span class="important">Objetivos a corto plazo: </span> <%= alumno.objetivos_corto_plazo%></p>
+          <p><span class="important">Objetivos a largo plazo: </span> <%= alumno.objetivos_largo_plazo%></p>
+          <p><span class="important">Informacion adicional:</span><%= alumno.informacion_adicional %></p>
+        </div>
+        <% }) %>
+      </div>
+</body>
+</html>

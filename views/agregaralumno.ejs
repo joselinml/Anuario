@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/registro.css">
+    <title>Agregar alumno</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Agregar alumno</h1>
+            <form action="/addalumno" method="POST" enctype="multipart/form-data">
+                
+                <label for="num">N°Control:</label>
+                <input type="number" id="num" name="num" required><br><br>
+               
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="text" id="correo_electronico" name="correo_electronico" required><br><br>
+
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasena" name="contrasena" required><br><br>
+        
+                <label for="fotografia">Fotografía:</label>
+                <input type="file" id="fotografia" name="fotografia" required><br><br>
+        
+                <label for="intereses">Intereses académicos:</label>
+                <input type="text" id="intereses_academicos" name="intereses_academicos" required><br><br>
+        
+                <label for="habilidades">Habilidades y fortalezas:</label>
+                <input type="text" id="habilidad_fortalezas" name="habilidades_fortalezas" required><br><br>
+        
+                <label for="objetivos_corto_plazo">Objetivos a corto plazo:</label>
+                <input type="text" id="objetivos_corto_plazo" name="objetivos_corto_plazo" required><br><br>
+        
+                <label for="objetivos_largo_plazo">Objetivos a largo plazo:</label>
+                <input type="text" id="objetivos_largo_plazo" name="objetivos_largo_plazo" required><br><br>
+        
+                <label for="informacion_adicional">Información adicional:</label>
+                <input type="text" id="informacion_adicional" name="informacion_adicional" required><br><br>
+        
+                <input type="submit" value="Registrar">
+            </form>
+
+            
+
+        </div>
+
+    </div>
+</body>
+</html>

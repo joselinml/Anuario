@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Proyectos de alumnos</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Autores</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% proyectos.forEach((proyecto) => { %>
+                    <tr>
+                        
+                        <td><%= proyecto.nombre_proyecto %></td>
+                        <td><%= proyecto.detalles_proyecto%></td>
+                        <td><%= proyecto.autores %></td>
+                        <td>
+                            <form action="/eliminarproyecto" method="post" onsubmit="return confirmarEliminacion()">
+                                <input type="hidden" name="id" value="<%= proyecto.id%>">
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
+                            </form>
+                            <br>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <!--<form action="/agregarproyecto" method="POST">-->
+            <a href="/agregarproyecto" class="btn btn-primary">Agregar Proyecto</a>
+            <button type="button"><a href="/inicioadmi">Volver a inicio</a></button>
+
+       <!--- </form>-->
+   
+    </div>
+    <script>
+         function confirmarEliminacion() {
+            return confirm("¿Estás seguro de que deseas eliminar este proyecto?");
+        }
+    </script>
+</body>
+</html>

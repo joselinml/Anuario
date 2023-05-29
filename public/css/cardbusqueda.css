@@ -1,0 +1,53 @@
+/* Estilos para la tarjeta (card) */
+body{
+  background-image: url('/public/imagenes/busquedaalumnos2.jpg');
+  background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(0.9);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .card-item {
+    margin-bottom: 20px;
+  }
+  
+  .student-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .student-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .student-details {
+    font-size: 20px;
+  }
+  
+  .card-link {
+    display: block;
+    margin-top: 20px;
+  }
+  h2{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #191515;
+    font-size: 40px;
+  }
+  

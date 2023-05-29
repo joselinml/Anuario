@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/newproyect.css">
+    <title>Nuevo Proyecto</title>
+</head>
+<body>
+	
+	<div class="contenedor"> 
+		<h1>Añadir nuevo proyecto</h1>
+		
+        <form action="/agregarproyecto" method="POST" enctype="multipart/form-data">
+		
+		    <label for="nombre_proyecto">Nombre del Proyecto:</label>
+		    <input type="text" id="nombre_proyecto" name="nombre_proyecto"  required><br><br>
+
+		    <label for="foto">Foto</label>
+		    <input type="file" id="foto" name="foto" required><br><br>
+
+		    <label for="descripcion">Descripción del Proyecto:</label><br>
+		    <textarea id="detalles_proyecto" name="detalles_proyecto" rows="4" cols="50" required></textarea><br><br>
+
+		    <label for="autores">Autores:</label>
+		    <input type="text" id="autores" name="autores" required><br><br>
+
+		    <input type="submit" value="Subir proyecto">
+		</form>
+	</div>
+
+</body>
+</html>

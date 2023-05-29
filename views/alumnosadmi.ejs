@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumnos</title>
+
+    <!-- CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="mb-3">
+            <a href="/inicioadmi" class="btn btn-primary">Volver al inicio</a>
+            <a href="/addalumno" class="btn btn-success">Agregar alumno</a>
+        </div>
+    <div class="container">
+        <h1>Alumnos</h1>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Fotografia del alumno</th>
+                    <th>Alumno:</th>
+                    <th>No. de control:</th>
+                    <th>Correo Electrónico</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% alumno.forEach((alumnos) => { %>
+                    <tr>
+                        <td><img src="/public/imagenes/<%= alumnos.fotografia %>" alt="Fotografía del alumno"class="rounded-circle" style="width: 90px; height: 90px;"></td>
+                        <td><%= alumnos.nombre %></td>
+                        <td><%= alumnos.Num_control %></td>
+                        <td><%= alumnos.correo_electronico %></td>
+                        <td>
+                            <form action="/eliminaruser" method="post" onsubmit="return confirmarEliminacion()">
+                                <input type="hidden" name="num" value="<%= alumnos.Num_control %>">
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
+                            </form>
+                            <br>
+                            <form action="/modificaralum" method="GET">
+                                <input type="hidden" name="id" value="<%= alumnos.Num_control %>">
+                                <button type="submit" class="btn btn-primary">Editar</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function confirmarEliminacion() {
+            return confirm("¿Estás seguro de que deseas eliminar este usuario?");
+        }
+    </script>
+</body>
+</html>

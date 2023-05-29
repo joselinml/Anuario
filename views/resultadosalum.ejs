@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/cardbusqueda.css">
+    
+    <title>Resultados de búsqueda</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Resultados de búsqueda</h2>
+        
+        <div class="card">
+            <% rows.forEach(alumnos => { %>
+                <div class="card-item">
+                    <div class="student-info">
+                        <div class="student-image">
+                            <img src="/public/imagenes/<%= alumnos.fotografia %>" alt="<%= alumnos.fotografia %>">
+                        </div>
+                        <div class="student-details">
+                            <p><strong>Alumno:</strong> <%= alumnos.nombre %></p>
+                            <p><strong>No. de control:</strong> <%= alumnos.Num_control %></p>
+                            <p><strong>Intereses academicos:</strong> <%= alumnos.intereses_academicos %></p>
+                            <p><strong>Habilidades y fortalezas:</strong> <%= alumnos.habilidades_fortalezas %></p>
+                            <p><strong>Objetivos a corto plazo:</strong> <%= alumnos.objetivos_corto_plazo %></p>
+                            <p><strong>Objetivos a largo plazo:</strong> <%= alumnos.objetivos_largo_plazo %></p>
+                            <p><strong>Informacion adicional:</strong> <%= alumnos.informacion_adicional %></p>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+
+        <p><a href="/inicioalumno" class="card-link">Volver a inicio</a></p>
+    </div>
+</body>
+</html>
