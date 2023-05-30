@@ -1,7 +1,7 @@
 # Anuario escolar
 Creación de un anuario escolar. Programación Web.
  
-Para la creación de este formulario se necesitó lo siguiente: con el comando npm install (respectivo importe)
+Para la creación de este anuario se necesitó lo siguiente: con el comando npm install (respectivo importe)
 ### npm install init -y  
 ### npm install express
 ### npm install mysql
